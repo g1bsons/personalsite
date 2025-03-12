@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brutalist Personal Site</title>
+    <link rel="stylesheet" href="siteplan.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="logo">GIBSON SMITH</h1>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#about" class="nav-about">ABOUT</a></li>
+                <li><a href="#work" class="nav-work">WORK</a></li>
+                <li><a href="#projects" class="nav-projects">PROJECTS</a></li>
+                <li><a href="#resume" class="nav-resume">RESUME</a></li>
+                <li><a href="#contact" class="nav-contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h2>BRUTALIST DESIGN.<br>MINIMAL APPROACH.<br><span class="accent-text color-shift">MAXIMUM IMPACT.</span></h2>
+                <p>Designer / Developer / Creative</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>ABOUT</h2>
+            <div class="section-content">
+                <div class="about-text">
+                    <p>I am a multidisciplinary designer and developer focused on creating direct, impactful digital experiences.</p>
+                    <p>My work combines raw aesthetics with functional design, stripping away the unnecessary to focus on what matters most.</p>
+                </div>
+                <div class="accent-block"></div>
+            </div>
+        </section>
+
+        <section id="work">
+            <h2>WORK</h2>
+            <div class="section-content">
+                <div class="work-grid">
+                    <div class="work-item">
+                        <div class="work-image"></div>
+                        <h3>PROJECT TITLE</h3>
+                        <p>Brief description of the project and your role</p>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-image"></div>
+                        <h3>PROJECT TITLE</h3>
+                        <p>Brief description of the project and your role</p>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-image"></div>
+                        <h3>PROJECT TITLE</h3>
+                        <p>Brief description of the project and your role</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>PROJECTS</h2>
+            <div class="section-content">
+                <div class="projects-list">
+                    <div class="project">
+                        <span class="project-year">2025</span>
+                        <h3 class="project-title">Personal Project Name</h3>
+                        <p class="project-desc">Exploration of interactive design systems</p>
+                    </div>
+                    <div class="project">
+                        <span class="project-year">2024</span>
+                        <h3 class="project-title">Side Project Name</h3>
+                        <p class="project-desc">Experimental typography research</p>
+                    </div>
+                    <div class="project">
+                        <span class="project-year">2023</span>
+                        <h3 class="project-title">Collaboration Project</h3>
+                        <p class="project-desc">Cross-disciplinary art installation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume">
+            <h2>RESUME</h2>
+            <div class="section-content">
+                <div class="resume-container">
+                    <div class="resume-preview">
+                        <iframe id="resume-viewer" src="path-to-your-resume.pdf" title="Resume Preview"></iframe>
+                    </div>
+                    <div class="resume-actions">
+                        <a href="path-to-your-resume.pdf" download class="download-button">DOWNLOAD RESUME</a>
+                        <a href="path-to-your-resume.pdf" target="_blank" class="view-button">VIEW FULL SCREEN</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>CONTACT</h2>
+            <div class="section-content">
+                <p class="contact-email">gibsoncsmith1@gmail.com</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 GIBSON SMITH. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all sections and navigation links
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('#main-nav a');
+            
+            // Function to highlight the active nav item - MODIFIED
+            function highlightNavigation() {
+                // Get current scroll position
+                let scrollY = window.pageYOffset;
+                
+                // Special case for bottom of page to highlight contact
+                if (scrollY + window.innerHeight >= document.body.offsetHeight - 50) {
+                    // We're at the bottom of the page or very close
+                    // Remove active class from all links
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    
+                    // Add active to contact link
+                    const contactLink = document.querySelector('#main-nav a[href="#contact"]');
+                    if(contactLink) {
+                        contactLink.classList.add('active');
+                    }
+                    return;
+                }
+                
+                // Loop through sections to find the one in view
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100; // Offset for header
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+                    
+                    // If user is within this section
+                    if(scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                        // Remove active class from all links
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        
+                        // Add active class to corresponding nav link
+                        if(sectionId) {
+                            const currentLink = document.querySelector(`#main-nav a[href="#${sectionId}"]`);
+                            if(currentLink) {
+                                currentLink.classList.add('active');
+                            }
+                        }
+                    }
+                });
+            }
+            
+            // Run on scroll
+            window.addEventListener('scroll', highlightNavigation);
+            
+            // Run once on load to set initial state
+            highlightNavigation();
+            
+            // Smooth scrolling for navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if(targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Color shift interactive behavior - NEW
+            const colorShiftElement = document.querySelector('.color-shift');
+            if (colorShiftElement) {
+                colorShiftElement.addEventListener('mouseover', function() {
+                    this.style.animationPlayState = 'paused';
+                });
+                
+                colorShiftElement.addEventListener('mouseout', function() {
+                    this.style.animationPlayState = 'running';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
