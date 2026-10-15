@@ -1,213 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gibson Smith</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Gibson Smith — data and web developer based in Rexburg, Idaho.">
+<title>Gibson Smith</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1 class="logo">GIBSON SMITH</h1>
-        <nav id="main-nav">
-            <ul>
-                <li><a href="#about" class="nav-about">ABOUT</a></li>
-                <li><a href="#work" class="nav-work">WORK</a></li>
-                <li><a href="#projects" class="nav-projects">PROJECTS</a></li>
-                <li><a href="#resume" class="nav-resume">RESUME</a></li>
-                <li><a href="#contact" class="nav-contact">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="hero">
-            <div class="hero-content">
-                <h2>BRUTALIST DESIGN.<br>MINIMAL APPROACH.<br><span class="accent-text color-shift">MAXIMUM IMPACT.</span></h2>
-                <p>Designer / Developer / Creator</p>
-            </div>
-        </section>
 
-        <section id="about">
-            <h2>ABOUT</h2>
-            <div class="section-content">
-                <div class="about-text">
-                    <p>I am a multifaceted designer and developer focused on creating direct, impactful digital experiences.</p>
-                    <p>My work combines raw aesthetics with functional design, stripping away the unnecessary to focus on what matters most.</p>
-                    <p>This is my passion and desire, to be on the front line of the cutting edge.</p>
-                </div>
-                <div class="accent-block"></div>
-            </div>
-        </section>
+<header class="site">
+  <div class="navrow">
+    <a class="wordmark" href="#top">GIBSON<span>.</span>SMITH</a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span class="bars" aria-hidden="true"></span>
+    </button>
+    <nav class="links" id="site-nav" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#resume">Resume</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-        <section id="work">
-            <h2>WORK</h2>
-            <div class="section-content">
-                <div class="work-grid">
-                    <div class="work-item">
-                        <div class="work-image"></div>
-                        <h3>PROJECT TITLE</h3>
-                        <p>Brief description of the project and your role</p>
-                    </div>
-                    <div class="work-item">
-                        <div class="work-image"></div>
-                        <h3>PROJECT TITLE</h3>
-                        <p>Brief description of the project and your role</p>
-                    </div>
-                    <div class="work-item">
-                        <div class="work-image"></div>
-                        <h3>PROJECT TITLE</h3>
-                        <p>Brief description of the project and your role</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<main id="top">
+  <div class="wrap hero">
+    <h1>Data by day.<br>Design by night.</h1>
+    <div class="row2">
+      <p class="lede">Gibson Smith — I build data tools and web products, and I don't hand off a project until the code and the layout are both right.</p>
+      <p class="meta">Rexburg, Idaho<br>BYU‑Idaho, Data Science</p>
+    </div>
+  </div>
 
-        <section id="projects">
-            <h2>PROJECTS</h2>
-            <div class="section-content">
-                <div class="projects-list">
-                    <div class="project">
-                        <span class="project-year">2025</span>
-                        <h3 class="project-title">Personal Project Name</h3>
-                        <p class="project-desc">Exploration of interactive design systems</p>
-                    </div>
-                    <div class="project">
-                        <span class="project-year">2024</span>
-                        <h3 class="project-title">Side Project Name</h3>
-                        <p class="project-desc">Experimental typography research</p>
-                    </div>
-                    <div class="project">
-                        <span class="project-year">2023</span>
-                        <h3 class="project-title">Collaboration Project</h3>
-                        <p class="project-desc">Cross-disciplinary art installation</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <div class="wrap">
+    <section id="about">
+      <div class="about-grid">
+        <div>
+          <p>I study data science, but I spend just as much time in CSS as I do in Polars. That combination is the point: I can clean a dataset and tell you what it means, and I can build the site or the dashboard that shows it.</p>
+          <p>Most of what's below started as someone's specific, unglamorous problem — a photographer needing a real site, a class needing a scheduling algorithm that actually works, a nonprofit brief needing numbers turned into a story. I like that kind of problem.</p>
+        </div>
+        <ul class="facts">
+          <li><span class="k">Based in</span><span>Rexburg, ID</span></li>
+          <li><span class="k">Studying</span><span>Data Science, BYU‑Idaho</span></li>
+          <li><span class="k">Focus</span><span>Web dev, data analysis, tooling</span></li>
+          <li><span class="k">Open to</span><span>Freelance + contract work</span></li>
+        </ul>
+      </div>
+    </section>
 
-        <section id="resume">
-            <h2>RESUME</h2>
-            <div class="section-content">
-                <div class="resume-container">
-                    <div class="resume-preview">
-                        <iframe id="resume-viewer" src="path-to-your-resume.pdf" title="Resume Preview"></iframe>
-                    </div>
-                    <div class="resume-actions">
-                        <a href="path-to-your-resume.pdf" download class="download-button">DOWNLOAD RESUME</a>
-                        <a href="path-to-your-resume.pdf" target="_blank" class="view-button">VIEW FULL SCREEN</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section id="work">
+      <div class="head-row">
+        <h2>Work</h2>
+        <p class="note">Client sites, coursework, and things built because they needed to exist.</p>
+      </div>
 
-        <section id="contact">
-            <h2>CONTACT</h2>
-            <div class="section-content">
-                <p class="contact-email">gibsoncsmith1@gmail.com</p>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/gib.s.mith?igsh=YnVvdDUzMXI2cWQw&utm_source=qr"  class="social-link">Instagram</a>
-                    <a href="https://x.com/gsmitty112?s=11"                                             class="social-link">Twitter</a>
-                    <a href="www.linkedin.com/in/gibson-smith-05957b350"                                class="social-link">LinkedIn</a>
-                    <a href="https://github.com/g1bsons"                                                class="social-link">GitHub</a>
-                </div>
-            </div>
-        </section>
-    </main>
+      <div class="project">
+        <div class="year">2026</div>
+        <div>
+          <h3>Natalie Morgan Photography</h3>
+          <p>Full site design and build for a working photographer — several visual directions tested before landing on a warm, kraft-paper-and-teal palette that lets the photography lead.</p>
+          <div class="tags"><span class="tag">HTML/CSS</span><span class="tag">Art direction</span><span class="tag">Client work</span></div>
+        </div>
+        <a class="link" href="#contact">Ask about it →</a>
+      </div>
 
-    <footer>
-        <p>© 2025 GIBSON SMITH. All rights reserved.</p>
-    </footer>
+      <div class="project">
+        <div class="year">2026</div>
+        <div>
+          <h3>Student Scheduler</h3>
+          <p>A client-side scheduling tool that resolves timetable conflicts with a greedy algorithm plus backtracking, no server required. CSV import/export and a dark, minimalist interface.</p>
+          <div class="tags"><span class="tag">JavaScript</span><span class="tag">Algorithms</span><span class="tag">Client-side only</span></div>
+        </div>
+        <a class="link" href="https://github.com/g1bsons" target="_blank" rel="noopener">GitHub →</a>
+      </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get all sections and navigation links
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('#main-nav a');
-            
-            // Function to highlight the active nav item - MODIFIED
-            function highlightNavigation() {
-                // Get current scroll position
-                let scrollY = window.pageYOffset;
-                
-                // Special case for bottom of page to highlight contact
-                if (scrollY + window.innerHeight >= document.body.offsetHeight - 50) {
-                    // We're at the bottom of the page or very close
-                    // Remove active class from all links
-                    navLinks.forEach(link => {
-                        link.classList.remove('active');
-                    });
-                    
-                    // Add active to contact link
-                    const contactLink = document.querySelector('#main-nav a[href="#contact"]');
-                    if(contactLink) {
-                        contactLink.classList.add('active');
-                    }
-                    return;
-                }
-                
-                // Loop through sections to find the one in view
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop - 100; // Offset for header
-                    const sectionHeight = section.offsetHeight;
-                    const sectionId = section.getAttribute('id');
-                    
-                    // If user is within this section
-                    if(scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                        // Remove active class from all links
-                        navLinks.forEach(link => {
-                            link.classList.remove('active');
-                        });
-                        
-                        // Add active class to corresponding nav link
-                        if(sectionId) {
-                            const currentLink = document.querySelector(`#main-nav a[href="#${sectionId}"]`);
-                            if(currentLink) {
-                                currentLink.classList.add('active');
-                            }
-                        }
-                    }
-                });
-            }
-            
-            // Run on scroll
-            window.addEventListener('scroll', highlightNavigation);
-            
-            // Run once on load to set initial state
-            highlightNavigation();
-            
-            // Smooth scrolling for navigation links
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    const targetSection = document.querySelector(targetId);
-                    
-                    if(targetSection) {
-                        window.scrollTo({
-                            top: targetSection.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-            
-            // Color shift interactive behavior - NEW
-            const colorShiftElement = document.querySelector('.color-shift');
-            if (colorShiftElement) {
-                colorShiftElement.addEventListener('mouseover', function() {
-                    this.style.animationPlayState = 'paused';
-                });
-                
-                colorShiftElement.addEventListener('mouseout', function() {
-                    this.style.animationPlayState = 'running';
-                });
-            }
-        });
-    </script>
+      <div class="project">
+        <div class="year">2026</div>
+        <div>
+          <h3>Eternal Quest</h3>
+          <p>A gamified goal-tracking console app in C#, built around a class hierarchy for simple, eternal, and checklist goals, with save/load support — designed with UML before any code.</p>
+          <div class="tags"><span class="tag">C#</span><span class="tag">OOP design</span><span class="tag">CLI</span></div>
+        </div>
+        <a class="link" href="https://github.com/g1bsons" target="_blank" rel="noopener">GitHub →</a>
+      </div>
+
+      <div class="project">
+        <div class="year">2025</div>
+        <div>
+          <h3>WHO Tuberculosis Analysis</h3>
+          <p>A data deep-dive into WHO tuberculosis data, framed as a real engagement for a fictional Gates Foundation brief — delivered as a full presentation, not just a notebook.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Polars</span><span class="tag">Data storytelling</span></div>
+        </div>
+        <a class="link" href="#contact">Ask about it →</a>
+      </div>
+
+      <div class="project">
+        <div class="year">2025</div>
+        <div>
+          <h3>Password manager &amp; wedding site</h3>
+          <p>Two smaller standalone builds: a local password manager web app, and a custom HTML wedding announcement site for a friend — both scoped, designed, and shipped solo.</p>
+          <div class="tags"><span class="tag">HTML/CSS</span><span class="tag">JavaScript</span></div>
+        </div>
+        <a class="link" href="https://github.com/g1bsons" target="_blank" rel="noopener">GitHub →</a>
+      </div>
+    </section>
+
+    <section id="resume">
+      <div class="head-row">
+        <h2>Resume</h2>
+        <p class="note">Read it in the browser or take a copy with you.</p>
+      </div>
+
+      <div class="resume-grid">
+        <div>
+          <p class="resume-summary">Software and data engineer with experience in workflow management, data integrity and business development, working in SQL, Python and C#.</p>
+          <p>Currently leading data integrity work at BYU‑Idaho while finishing a B.S. in Computer Science with a Machine Learning focus.</p>
+          <div class="resume-actions">
+            <a class="btn primary" href="resume.pdf" target="_blank" rel="noopener">View resume</a>
+            <a class="btn" href="resume.pdf" download="Gibson-Smith-Resume.pdf">Download PDF</a>
+            <button class="btn" id="preview-toggle" type="button" aria-expanded="false" aria-controls="resume-preview" hidden>Preview here</button>
+          </div>
+        </div>
+        <ul class="resume-points">
+          <li><span class="k">Now</span>Data Integrity Specialist Lead, BYU‑Idaho</li>
+          <li><span class="k">Education</span>B.S. Computer Science, BYU‑Idaho (expected Dec 2027)</li>
+          <li><span class="k">Languages</span>English, Mandarin Chinese</li>
+        </ul>
+      </div>
+
+      <div class="resume-preview" id="resume-preview">
+        <iframe id="resume-frame" data-src="resume.pdf#view=FitH" title="Gibson Smith resume (PDF)"></iframe>
+      </div>
+    </section>
+
+    <section id="stack">
+      <div class="head-row">
+        <h2>Stack</h2>
+        <p class="note">What I reach for most, roughly in that order.</p>
+      </div>
+      <div class="stacklist">
+        <span>Python</span><span>Polars</span><span>C#</span><span>HTML/CSS</span><span>JavaScript</span><span>Quarto</span><span>Git</span>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-block">
+      <h2>Let's talk.</h2>
+      <div class="contact-row">
+        <a class="email-link" href="mailto:gibsoncsmith1@gmail.com">gibsoncsmith1@gmail.com</a>
+        <div class="social">
+          <a href="https://github.com/g1bsons" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/gibson-smith-05957b350" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="wrap">© 2026 Gibson Smith</footer>
+
 </body>
 </html>
