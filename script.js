@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     // Reset when resizing up to desktop
     window.addEventListener('resize', function () {
-      if (window.innerWidth > 700) setMenu(false);
+      if (window.innerWidth > 860) setMenu(false);
     });
   }
 
