@@ -54,7 +54,7 @@ header.site {
 }
 .wordmark { font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 18px; text-decoration: none; }
 .wordmark span { color: var(--accent); }
-nav.links { display: flex; gap: 28px; font-size: 14px; font-weight: 500; }
+nav.links { display: flex; gap: 22px; font-size: 14px; font-weight: 500; }
 nav.links a { text-decoration: none; color: var(--ink); }
 nav.links a:hover { color: var(--accent); }
 
@@ -74,7 +74,7 @@ nav.links a:hover { color: var(--accent); }
 .menu-btn[aria-expanded="true"] .bars::before { transform: translateY(6px) rotate(45deg); }
 .menu-btn[aria-expanded="true"] .bars::after { transform: translateY(-6px) rotate(-45deg); }
 
-@media (max-width: 700px) {
+@media (max-width: 860px) {
   /* Without JS the links simply wrap under the wordmark; with JS they become a menu. */
   .navrow { flex-wrap: wrap; row-gap: 10px; }
   nav.links { flex-wrap: wrap; gap: 8px 20px; width: 100%; }
@@ -89,16 +89,16 @@ nav.links a:hover { color: var(--accent); }
 }
 
 /* Hero */
-.hero { padding: 80px 0 64px; border-bottom: 1px solid var(--line); }
+.hero { padding-top: 80px; padding-bottom: 64px; border-bottom: 1px solid var(--line); }
 .hero h1 {
   font-weight: 900; font-size: clamp(2.2rem, 8vw, 5.6rem); line-height: 0.98;
-  text-transform: uppercase; overflow-wrap: break-word;
+  text-transform: uppercase; overflow-wrap: break-word; text-wrap: balance;
 }
 .hero .row2 { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-top: 28px; flex-wrap: wrap; }
 .hero p.lede { font-size: 18px; color: var(--muted); max-width: 40ch; margin: 0; }
 .hero .meta { font-size: 14px; color: var(--muted); text-align: right; margin: 0; }
 @media (max-width: 600px) {
-  .hero { padding: 48px 0 40px; }
+  .hero { padding-top: 48px; padding-bottom: 40px; }
   .hero .row2 { gap: 20px; }
   .hero .meta { text-align: left; }
 }
@@ -138,6 +138,20 @@ h2 { font-weight: 700; font-size: clamp(1.6rem, 3.4vw, 2.3rem); }
 .project .link:hover { text-decoration: underline; }
 @media (max-width: 680px) { .project .link { padding: 8px 0; margin-top: 4px; } }
 
+/* Hero extras */
+.status { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; margin: 0 0 20px; }
+.status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex: none; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+
+/* Experience + education */
+.role { display: grid; grid-template-columns: 170px 1fr; gap: 20px; align-items: start; padding: 26px 0; border-top: 1px solid var(--line); }
+@media (max-width: 680px) { .role { grid-template-columns: 1fr; gap: 6px; } }
+.role .when { color: var(--muted); font-size: 14px; padding-top: 5px; font-variant-numeric: tabular-nums; }
+.role h3 { font-weight: 700; font-size: 21px; margin: 0 0 2px; text-transform: none; }
+.role .org { color: var(--muted); font-size: 15px; margin: 0 0 14px; }
+.role ul { margin: 0 0 14px; padding-left: 18px; color: var(--muted); max-width: 62ch; }
+.role li { margin-bottom: 6px; }
+
 /* Resume */
 .resume-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: start; }
 @media (max-width: 720px) { .resume-grid { grid-template-columns: 1fr; gap: 28px; } }
@@ -169,11 +183,16 @@ h2 { font-weight: 700; font-size: clamp(1.6rem, 3.4vw, 2.3rem); }
 @media (max-width: 700px) { .resume-preview { display: none !important; } }
 
 /* Stack */
-.stacklist { display: flex; flex-wrap: wrap; gap: 10px 14px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px; }
-.stacklist span:not(:last-child)::after { content: "/"; margin-left: 14px; color: var(--line); }
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+@media (max-width: 700px) { .skills-grid { grid-template-columns: 1fr; gap: 28px; } }
+.skill-group h3 { font-family: 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+.skill-group ul { list-style: none; margin: 0; padding: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 16px; }
+.skill-group li { padding: 8px 0; border-top: 1px solid var(--line); }
+.skill-group li:first-child { border-top: none; padding-top: 0; }
 
 /* Contact */
 .contact-block h2 { font-weight: 900; font-size: clamp(2.2rem, 6vw, 3.4rem); text-transform: uppercase; max-width: 12ch; }
+.contact-note { color: var(--muted); max-width: 52ch; margin: 20px 0 0; }
 .contact-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 20px 32px; margin-top: 28px; }
 .email-link { font-family: 'Archivo', sans-serif; font-weight: 700; font-size: clamp(1.05rem, 4.6vw, 1.8rem); text-decoration: none; color: var(--accent); overflow-wrap: anywhere; }
 .email-link:hover { text-decoration: underline; }
